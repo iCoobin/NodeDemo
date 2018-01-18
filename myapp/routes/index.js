@@ -12,4 +12,8 @@ router.get('/ios',function(req, res, next){
   // res.end("<script>window.location.href = 'https://itunes.apple.com/app/id1112879717?mt=8';</script>")
 });
 
+router.get('/apple-app-site-association',function(req, res, next){
+  res.end(fs.readFileSync('./well-known/apple-app-site-association'));
+});
+
 module.exports = router;
