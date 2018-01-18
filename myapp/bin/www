@@ -9,7 +9,7 @@ import { request } from 'https';
 var app = require('../app');
 var debug = require('debug')('myapp:server');
 var http = require('http');
-var https = request('https')
+var https = require('https')
 
 /**
  * Get port from environment and store in Express.
