@@ -9,9 +9,10 @@ var params = {
   hi : 'Hello World!',
   hello : 'Hello Node!'
 }
+var html = "<html><body><p>Hello World!</p></body></html>"
 
 var server = https.createServer(options ,function(req, res){
     res.writeHead(200, {'Content-Type': 'application/json'});
     // res.end(JSON.stringify(params));
-    res.end("Hello world!");
+    res.end(html);
 }).listen(80);
