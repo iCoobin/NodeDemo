@@ -7,8 +7,4 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/apple-app-site-association', function(req, res, next){
-  res.end(fs.readFileSync('./bin/apple-app-site-association'));
-});
-
 module.exports = router;
