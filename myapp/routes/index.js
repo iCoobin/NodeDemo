@@ -13,6 +13,7 @@ router.get('/ios',function(req, res, next){
 });
 
 router.get('/apple-app-site-association',function(req, res, next){
+  res.writeHead(200, {'Content-Type': 'application / pkcs7-mime'});
   res.end(fs.readFileSync('./well-known/apple-app-site-association'));
 });
 
