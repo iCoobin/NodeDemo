@@ -9,6 +9,7 @@ import { request } from 'https';
 var app = require('../app');
 var debug = require('debug')('myapp:server');
 var http = require('http');
+var fs = require('fs');
 var https = require('https')
 
 /**
