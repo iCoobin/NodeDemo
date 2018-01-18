@@ -12,7 +12,8 @@ var params = {
 var html = "<html><body><p>Hello World!</p></body></html>"
 
 var server = https.createServer(options ,function(req, res){
-    res.writeHead(200, {'Content-Type': 'application/json'});
+    // res.writeHead(200, {'Content-Type': 'application/json'});
     // res.end(JSON.stringify(params));
-    res.end(html);
+    // res.end(html);
+    res.end(fs.readFileSync('./apple-app-site-association'))
 }).listen(80);
