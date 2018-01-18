@@ -1,11 +1,11 @@
 {
-  "applinks": {
-    "apps": [],
-    "details": [
-      { 
-        "appID":"HAZL33T8N9.cn.ejufu.ejufu",
-        "paths":["/ios/"]
-      }
-    ]
-  }
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "HAZL33T8N9.cn.ejufu.ejufu",
+                "paths": [ "*" ]
+            }
+        ]
+    }
 }
