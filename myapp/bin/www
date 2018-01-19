@@ -5,15 +5,21 @@
  */
 
 var app = require('../app');
+var app1 = require('../app1');
 var debug = require('debug')('myapp:server');
 var http = require('http');
 var https = require('https');
 var fs = require('fs')
 
 var options = {
-  key: fs.readFileSync('./bin/214450929880276.key'),
-  cert: fs.readFileSync('./bin/214450929880276.pem')
+  key: fs.readFileSync('./SSL/ios.ejufu.cn/214450929880276.key'),
+  cert: fs.readFileSync('./SSL/ios.ejufu.cn/214450929880276.pem')
 };
+
+var options1 = {
+  key: fs.readFileSync('./SSL/ios1.ejufu.cn/214454690510276.key'),
+  cert: fs.readFileSync('./SSL/ios1.ejufu.cn/214454690510276.pem')
+}
 
 /**
  * Get port from environment and store in Express.
@@ -22,11 +28,15 @@ var options = {
 var port = normalizePort(process.env.PORT || '443');
 app.set('port', port);
 
+var port1 = normalizePort(process.env.PORT || '80');
+app1.set('port', port1)
+
 /**
  * Create HTTP server.
  */
 
 var server = https.createServer(options,app);
+var server1 = https.createServer(options1,app1);
 
 
 /**
@@ -36,6 +46,10 @@ var server = https.createServer(options,app);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
+
+server1.listen(port1);
+server1.on('error', onError);
+server1.on('listening', onListening);
 
 /**
  * Normalize a port into a number, string, or false.
