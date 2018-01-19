@@ -5,7 +5,8 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {
   // res.render('index', { title: 'Express' });
-  res.end("<a href='https://ios.ejufu.cn'>跳转连接</a>");
+  res.end("<a href='https://ios.ejufu.cn'>jump to ejufu</a><Br/><Br/><a href='ejufu://Action'>jump to ejufu2</a>");
+
 });
 
 router.get('/ios',function(req, res, next){
